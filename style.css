@@ -13,7 +13,7 @@ body {
     font-size: 14px;
     line-height: 1.5;
     color: #24352e;
-    background-color: #f4f7f4;
+    background-color: #000000;
 }
 
 a {
@@ -47,8 +47,8 @@ h3 {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    color: #ffffff;
-    background-color: #173f35;
+    color: #ece7e7;
+    background-color: #7c0d6a;
 }
 
 .logo {
@@ -61,7 +61,7 @@ h3 {
 }
 
 .logo span {
-    color: #b9d9c7;
+    color: #f5cdeb;
     font-size: 13px;
     letter-spacing: 2px;
 }
@@ -74,7 +74,7 @@ h3 {
 
 .menu h3 {
     margin: 12px 10px 8px;
-    color: #9bbdad;
+    color: #eec0ec;
     font-size: 10px;
     letter-spacing: 1.2px;
 }
@@ -91,25 +91,26 @@ h3 {
 .link:hover,
 .link.ativo {
     color: #ffffff;
-    background-color: #2b5b4c;
+    background-color: #0f0f0f;
 }
 
 .mensagem {
     margin-top: auto;
     margin-bottom: 20px;
     padding: 16px;
-    border: 1px solid #386957;
+    border: 1px solid #000000;
     border-radius: 10px;
-    background-color: #245445;
+    background-color: #a07693;
 }
 
-.mensagem h3 {
+.mensagem h3{
     margin-bottom: 8px;
     font-size: 14px;
+    color: #ffffff;
 }
 
 .mensagem p {
-    color: #d0e0d7;
+    color: #d1d6d3;
     font-size: 12px;
 }
 
@@ -133,7 +134,7 @@ h3 {
 
 .subtitulo {
     margin-bottom: 8px;
-    color: #24745b;
+    color: #f3f0f0;
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -141,12 +142,12 @@ h3 {
 
 .cabecalho h1 {
     margin-bottom: 7px;
-    color: #173f35;
+    color: #dd1dc3;
     font-size: 30px;
 }
 
 .descricao {
-    color: #849089;
+    color: #ffffff;
     font-size: 13px;
 }
 
@@ -161,7 +162,7 @@ h3 {
 }
 
 .periodo label {
-    color: #849089;
+    color: #dd1dc3;
     font-size: 12px;
 }
 
@@ -170,7 +171,7 @@ h3 {
     padding: 4px;
     border: none;
     outline: none;
-    color: #24352e;
+    color: #dd1dc3;
     background-color: #ffffff;
 }
 
@@ -188,14 +189,14 @@ h3 {
 .cartao {
     min-width: 0;
     padding: 20px;
-    border: 1px solid #e2e9e3;
+    border: 1px solid #913399;
     border-radius: 12px;
-    background-color: #ffffff;
+    background-color: #f5cdeb;
 }
 
 .cartao p {
     margin-bottom: 15px;
-    color: #849089;
+    color: #050505;
     font-size: 12px;
 }
 
@@ -206,18 +207,18 @@ h3 {
 }
 
 .cartao span {
-    color: #849089;
+    color: #0d0e0d;
     font-size: 11px;
 }
 
 .cartao.saldo {
     color: #ffffff;
-    border-color: #173f35;
-    background-color: #173f35;
+    border-color: #7c0d6a;
+    background-color: #7c0d6a;
 }
 
 .cartao.saldo p {
-    color: #d0e0d7;
+    color: #ffffff;
 }
 
 .cartao.saldo h2 {
@@ -225,7 +226,7 @@ h3 {
 }
 
 .cartao.saldo span {
-    color: #a8dfbd;
+    color: #ffffff;
 }
 
 /* ==============================
@@ -242,9 +243,9 @@ h3 {
 .painel {
     min-width: 0;
     padding: 22px;
-    border: 1px solid #e2e9e3;
+    border: 1px solid #0a0a0a;
     border-radius: 12px;
-    background-color: #ffffff;
+    background-color: #f5cdeb;;
 }
 
 .painel h2 {
@@ -255,7 +256,7 @@ h3 {
 
 .texto-auxiliar {
     margin-bottom: 20px;
-    color: #849089;
+    color: #686666;
     font-size: 11px;
 }
 
@@ -452,7 +453,7 @@ h3 {
     padding: 10px 13px;
     border: 1px solid #cbded1;
     border-radius: 8px;
-    color: #24745b;
+    color: #770d4b;
     background-color: #ffffff;
     font-size: 11px;
     font-weight: bold;
@@ -460,7 +461,7 @@ h3 {
 }
 
 .botao:hover {
-    background-color: #e5f3eb;
+    background-color: #e035ad;
 }
 
 .tabela-responsiva {
@@ -530,7 +531,7 @@ td small {
 }
 
 .rodape-tabela a {
-    color: #24745b;
+    color: #731780;
     font-weight: bold;
 }
 
@@ -545,7 +546,7 @@ td small {
     flex-wrap: wrap;
     gap: 10px;
     padding: 5px 0;
-    color: #849089;
+    color: #f5f8f6;
     font-size: 11px;
 }
 
