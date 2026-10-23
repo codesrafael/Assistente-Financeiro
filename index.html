@@ -1,313 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Assistente Financeiro</title>
-
+    <title>Meu Assistente Financeiro</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="container">
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <h1>Assistente Financeiro</h1>
+        <h4>Organize suas contas sem complicação.</h4>
+        <p>Ideal para gastos fixos para melhorar o controle financeiro.</p>
+    </header>
 
-        <!-- MENU LATERAL -->
-        <aside class="sidebar">
-
-            <div class="logo">
-                <h2>Assistente</h2>
-                <span>Financeiro</span>
-            </div>
-
-            <nav class="menu">
-                <h3>MENU PRINCIPAL</h3>
-
-                <a href="#inicio" class="link ativo">Início</a>
-                <a href="#investimentos" class="link">Investimentos</a>
-                <a href="#guardar-dinheiro" class="link">Guardar dinheiro</a>
-
-                <h3>PLANEJAMENTO</h3>
-
-                <a href="#objetivos" class="link">Meus objetivos</a>
-                <a href="#viagem" class="link">Planejar viagem</a>
-                <a href="#imovel" class="link">Comprar imóvel</a>
+    <!-- ABAS DE NAVEGAÇÃO -->
+     
+         <section class="secao-abas">
+            <nav class="abas">
+            <a href="#visao-geral" class="aba ativa">Visão geral</a>
+            <a href="#adicionar-gasto" class="aba">Adicionar gasto</a>
+            <a href="#historico" class="aba">Histórico</a>
             </nav>
+         </section>
+    
 
-            <div class="mensagem">
-                <h3>Seus planos começam aqui!</h3>
-                <p>
-                    Organize seu dinheiro hoje
-                    para realizar seus objetivos amanhã.
-                </p>
+    <main>
+
+        <!-- SEÇÃO 1: VISÃO GERAL (CARDS, GRÁFICO E FORMULÁRIO) -->
+        <section id="visao-geral" class="bloco-secao">
+            
+            <!-- CARDS DE VALORES -->
+            <div class="resumo">
+                <div class="card">
+                    <h3>Receitas</h3>
+                    <p>R$ 2.500,00</p>
+                </div>
+
+                <div class="card">
+                    <h3>Despesas</h3>
+                    <p>R$ 1.200,00</p>
+                </div>
+
+                <div class="card saldo">
+                    <h3>Sobra</h3>
+                    <p>R$ 1.300,00</p>
+                </div>
             </div>
 
-        </aside>
+            <!-- COMPARATIVO VISUAL (GRÁFICO SIMPLES DE BARRAS HORIZONTAIS) -->
+            <div class="painel-grafico">
+                <h2>Balanço: receitas vs despesas</h2>
+                <p align="center" class="descricao-grafico">Proporção de receitas e despesas</p>
 
-        <!-- CONTEÚDO PRINCIPAL -->
-        <main class="conteudo" id="inicio">
-
-            <!-- CABEÇALHO -->
-            <header class="cabecalho">
-
-                <div>
-                    <p class="subtitulo">CONTROLE SUA VIDA FINANCEIRA</p>
-                    <h1>Visão geral</h1>
-                    <p class="descricao">
-                        Acompanhe suas receitas e despesas mensais.
-                    </p>
+                <!-- Barra de Receitas -->
+                <div class="item-grafico">
+                    <div class="rotulo-grafico">
+                        <span>Receitas</span>
+                        <strong>(R$ 2.500,00)</strong>
+                    </div>
+                    <div class="trilho">
+                        <div class="barra receita" style="width: 100%;"></div>
+                    </div>
                 </div>
 
-                <div class="periodo">
-                    <label for="mes">Mês:</label>
+                <!-- Barra de Despesas (1200 / 2500 = 48%) -->
+                <div class="item-grafico">
+                    <div class="rotulo-grafico">
+                        <span>Gastos(em porcentagem às receitas)</span>
+                        <span class="recomendacao">Recomendado: 30%</span>
+                        <strong>48% (R$ 1.200,00)</strong>
+                        
+                        
+                    </div>
+                    <div class="trilho">
+                        <div class="barra despesa" style="width: 48%;"></div>
+                    </div>
+                </div>
+            </div>
 
-                    <select id="mes" name="mes">
-                        <option>Outubro de 2026</option>
-                        <option>Setembro de 2026</option>
-                        <option>Agosto de 2026</option>
+            <!-- ÁREA PARA ADICIONAR CONTA -->
+            <div id="adicionar-gasto" class="adicionar-gasto">
+                <h2>Adicionar movimentação</h2>
+                
+                <form>
+                    <label for="descricao">Adicione a movimentação</label>
+                    <input type="text" id="descricao" placeholder="Ex: Salário, Aluguel, serviços streaming">
+
+                    <label for="tipo">selecione o tipo do dado:</label>
+                    <select id="tipo">
+                        <option value="entrada">Entrada (receitas)</option>
+                        <option value="saida"> Saída (gastos)</option>
                     </select>
+
+                    <label for="valor">Digite o valor:</label>
+                    <input type="number" id="valor" placeholder="ex: 96.00">
+
+                    <button type="button">Salvar</button>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- SEÇÃO 2: ESPAÇO DE INVESTIMENTOS -->
+        <section id="investimentos" class="bloco-secao">
+            <h2>Espaço para Investimentos</h2>
+            <p class="descricao-secao">Acompanhe a sua reserva e suas metas financeiras para o futuro.</p>
+
+            <div class="cards-investimento">
+                <div class="card-meta">
+                    <h4>Reserva de Emergência</h4>
+                    <p class="valor-acumulado">R$ 3.500,00 <span>de R$ 6.000,00</span></p>
+                    <div class="trilho">
+                        <div class="progresso meta" style="width: 58%;"></div>
+                    </div>
+                    <small>58% da meta atingida</small>
                 </div>
 
-            </header>
-
-            <!-- RESUMO FINANCEIRO -->
-            <section class="resumo" aria-label="Resumo financeiro mensal">
-
-                <article class="cartao saldo">
-                    <p>Saldo do mês</p>
-                    <h2>R$ 3.250,00</h2>
-                    <span>Saldo positivo</span>
-                </article>
-
-                <article class="cartao">
-                    <p>Total recebido</p>
-                    <h2>R$ 5.500,00</h2>
-                    <span>Receitas do mês</span>
-                </article>
-
-                <article class="cartao">
-                    <p>Total gasto</p>
-                    <h2>R$ 2.250,00</h2>
-                    <span>Despesas do mês</span>
-                </article>
-
-                <article class="cartao">
-                    <p>Contas pendentes</p>
-                    <h2>R$ 450,00</h2>
-                    <span>Aguardando pagamento</span>
-                </article>
-
-            </section>
-
-            <!-- GRÁFICOS -->
-            <section class="graficos" aria-label="Gráficos financeiros">
-
-                <article class="painel">
-
-                    <h2>Receitas x Despesas</h2>
-                    <p class="texto-auxiliar">
-                        Comparativo ilustrativo dos últimos meses
-                    </p>
-
-                    <div class="grafico-barras">
-
-                        <div class="grupo-barra">
-                            <div class="barras">
-                                <div class="barra receita" style="height: 70%;"></div>
-                                <div class="barra despesa" style="height: 40%;"></div>
-                            </div>
-                            <span>Mai</span>
-                        </div>
-
-                        <div class="grupo-barra">
-                            <div class="barras">
-                                <div class="barra receita" style="height: 85%;"></div>
-                                <div class="barra despesa" style="height: 50%;"></div>
-                            </div>
-                            <span>Jun</span>
-                        </div>
-
-                        <div class="grupo-barra">
-                            <div class="barras">
-                                <div class="barra receita" style="height: 60%;"></div>
-                                <div class="barra despesa" style="height: 35%;"></div>
-                            </div>
-                            <span>Jul</span>
-                        </div>
-
-                        <div class="grupo-barra">
-                            <div class="barras">
-                                <div class="barra receita" style="height: 80%;"></div>
-                                <div class="barra despesa" style="height: 45%;"></div>
-                            </div>
-                            <span>Ago</span>
-                        </div>
-
-                        <div class="grupo-barra">
-                            <div class="barras">
-                                <div class="barra receita" style="height: 65%;"></div>
-                                <div class="barra despesa" style="height: 40%;"></div>
-                            </div>
-                            <span>Set</span>
-                        </div>
-
-                        <div class="grupo-barra">
-                            <div class="barras">
-                                <div class="barra receita" style="height: 95%;"></div>
-                                <div class="barra despesa" style="height: 50%;"></div>
-                            </div>
-                            <span>Out</span>
-                        </div>
-
+                <div class="card-meta">
+                    <h4>Meta: Computador Novo</h4>
+                    <p class="valor-acumulado">R$ 1.200,00 <span>de R$ 4.000,00</span></p>
+                    <div class="trilho">
+                        <div class="progresso meta" style="width: 30%;"></div>
                     </div>
-
-                    <div class="legenda">
-                        <span><i class="ponto verde"></i> Receitas</span>
-                        <span><i class="ponto rosa"></i> Despesas</span>
-                    </div>
-
-                </article>
-
-                <article class="painel">
-
-                    <h2>Distribuição das despesas</h2>
-                    <p class="texto-auxiliar">
-                        Veja como seu dinheiro está sendo utilizado.
-                    </p>
-
-                    <div class="grafico-circular">
-                        <div class="centro-grafico">
-                            <span>Total gasto</span>
-                            <strong>R$ 2.250</strong>
-                        </div>
-                    </div>
-
-                    <ul class="categorias">
-                        <li>
-                            <span><i class="ponto verde"></i> Moradia</span>
-                            <strong>35%</strong>
-                        </li>
-
-                        <li>
-                            <span><i class="ponto verde-claro"></i> Alimentação</span>
-                            <strong>25%</strong>
-                        </li>
-
-                        <li>
-                            <span><i class="ponto rosa"></i> Transporte</span>
-                            <strong>20%</strong>
-                        </li>
-
-                        <li>
-                            <span><i class="ponto amarelo"></i> Outros</span>
-                            <strong>20%</strong>
-                        </li>
-                    </ul>
-
-                </article>
-
-            </section>
-
-            <!-- TABELA DE LANÇAMENTOS -->
-            <section class="painel lancamentos">
-
-                <header class="titulo-lancamentos">
-                    <div>
-                        <h2>Lançamentos recentes</h2>
-                        <p class="texto-auxiliar">
-                            Acompanhe suas movimentações financeiras.
-                        </p>
-                    </div>
-
-                    <a href="#novo-lancamento" class="botao">
-                        + Novo lançamento
-                    </a>
-                </header>
-
-                <div class="tabela-responsiva">
-
-                    <table>
-
-                        <thead>
-                            <tr>
-                                <th>Descrição</th>
-                                <th>Categoria</th>
-                                <th>Pagamento</th>
-                                <th>Data</th>
-                                <th>Valor</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td>
-                                    <strong>Salário</strong>
-                                    <small>Receita mensal</small>
-                                </td>
-                                <td>Trabalho</td>
-                                <td>Recebimento</td>
-                                <td>05/10/2026</td>
-                                <td class="entrada">+ R$ 5.500,00</td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <strong>Conta de luz</strong>
-                                    <small>Despesa fixa</small>
-                                </td>
-                                <td>Moradia</td>
-                                <td>Pix</td>
-                                <td>08/10/2026</td>
-                                <td class="saida">- R$ 150,00</td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <strong>Supermercado</strong>
-                                    <small>Despesa variável</small>
-                                </td>
-                                <td>Alimentação</td>
-                                <td>Débito</td>
-                                <td>10/10/2026</td>
-                                <td class="saida">- R$ 320,00</td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <strong>Fatura do cartão</strong>
-                                    <small>Cartão de crédito</small>
-                                </td>
-                                <td>Compras</td>
-                                <td>Crédito</td>
-                                <td>15/10/2026</td>
-                                <td class="saida">- R$ 450,00</td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
+                    <small>30% da meta atingida</small>
                 </div>
+            </div>
+        </section>
 
-                <footer class="rodape-tabela">
-                    <span>4 lançamentos demonstrativos</span>
-                    <a href="#todos-lancamentos">Ver todos →</a>
-                </footer>
+        <!-- SEÇÃO 3: HISTÓRICO DAS CONTAS -->
+        <section id="historico" class="bloco-secao">
+            <h2>Histórico</h2>
 
-            </section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Tipo</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <thead>
+                    <tr>
+                        <td>Salário</td>
+                        <td>Entrada</td>
+                        <td>R$ 2.500,00</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>Conta de luz</td>
+                        <td>Saída</td>
+                        <td>R$ 150,00</td>
+                    </tr>
+                    <tr>
+                        <td>Compras do mês</td>
+                        <td> Saída</td>
+                        <td>R$ 600,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-            <!-- RODAPÉ DA PÁGINA -->
-            <footer class="rodape">
-                <p>Assistente Financeiro © 2026</p>
-                <p>Mais organização para suas escolhas.</p>
-            </footer>
+    </main>
 
-        </main>
-
-    </div>
+    <!-- RODAPÉ -->
+    <footer>
+        <p>Feito para ajudar a gerenciar sua vida financeira.</p>
+    </footer>
 
 </body>
 </html>
